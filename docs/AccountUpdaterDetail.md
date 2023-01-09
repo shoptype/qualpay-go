@@ -1,0 +1,19 @@
+# AccountUpdaterDetail
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**MerchantId** | **int64** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 16 N&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Unique ID assigned to a Merchant. | [optional] [default to null]
+**RequestId** | **int64** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 10 N&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Unique ID assigned to the account updater request. | [optional] [default to null]
+**RequestDate** | **string** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 10 AN, in YYYY-MM-DD format&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Account updater request date. Date when a harvest request was sent to the account updater service. | [optional] [default to null]
+**ResponseDate** | **string** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 10 AN, in YYYY-MM-DD format&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Account updater response date. Date when the account updater service responded. This field is empty if the response is not yet received. | [optional] [default to null]
+**CardId** | **string** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 32 AN&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Card ID received from a tokenization request for a card. The card_id may be used in place of a card number in messages requiring cardholder account data. | [optional] [default to null]
+**CardNumber** | **string** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 16 AN&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Cardholder card number(masked). | [optional] [default to null]
+**ExpDate** | **string** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 4 N, in MMYY format&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Card expiration date. | [optional] [default to null]
+**CardNumberNew** | **string** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 16 AN&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Updated cardholder card number(masked). This field will be empty if there are no updates to the card number. | [optional] [default to null]
+**ExpDateNew** | **string** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 4 N, in MMYY format&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Updated card expiration date. This field will be empty if there are no updates to the expiration date. | [optional] [default to null]
+**ReasonCode** | **string** | &lt;strong&gt;Format: &lt;/strong&gt;Variable length, up to 3 N&lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Account updater reason code.  Account updater reason code. Following are descriptions of the codes              &lt;ul&gt;              &lt;li&gt;000 - New Card/No response&lt;/li&gt;              &lt;li&gt;200 - Valid account no update&lt;/li&gt;              &lt;li&gt;201 - Account Expiration Date Updated&lt;/li&gt;              &lt;li&gt;202 - Account Number Updated&lt;/li&gt;              &lt;li&gt;203 - Account is Closed&lt;/li&gt;              &lt;li&gt;204 - Contact Cardholder&lt;/li&gt;              &lt;li&gt;206 - No Match&lt;/li&gt;              &lt;li&gt;315 - Invalid Expiration Date&lt;/li&gt;              &lt;li&gt;320 - Invalid Account Number&lt;/li&gt;              &lt;li&gt;329 - Invalid Card Type&lt;/li&gt;              &lt;/ul&gt; | [optional] [default to null]
+**Billable** | **bool** | &lt;br&gt;&lt;strong&gt;Description: &lt;/strong&gt;Merchants will be billed only for matches. Reason codes 201, 202, 203 and 204 are billable. | [optional] [default to null]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
